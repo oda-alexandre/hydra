@@ -1,6 +1,6 @@
 # HYDRA
 
-<img src="https://www.supinfo.com/articles/resources/160810/6336/0.png" width="200" height="200"/>
+<img src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/16766112/0.png" width="200" height="200"/>
 
 
 ## INDEX
