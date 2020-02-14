@@ -37,7 +37,7 @@ Use [docker](https://www.docker.com)
 
 ## INSTALL
 
-```docker run -d --rm --name hydra -v ${HOME}:/home/hydra -v /tmp/.X11-unix/:/tmp/.X11-unix/ -e DISPLAY alexandreoda/hydra```
+```docker run -ti --rm --name hydra -v ${HOME}:/home/hydra alexandreoda/hydra```
 
 ## LICENSE
 

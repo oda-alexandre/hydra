@@ -1,24 +1,17 @@
 FROM debian:stretch-slim
 
-LABEL authors https://www.oda-alexandre.com/
+LABEL authors https://www.oda-alexandre.com
 
 ENV USER hydra
 ENV HOME /home/${USER}
-ENV LOCALES fr_FR.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   apt-get update && apt-get install --no-install-recommends -y \
-  locales \
   ca-certificates \
   apt-transport-https \
   sudo \
-  libgtk2.0-0 \
-  hydra \
-  hydra-gtk
-
-RUN echo -e '\033[36;1m ******* CHANGE LOCALES ******** \033[0m' && \
-  locale-gen ${LOCALES}
+  hydra
 
 RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
   useradd -d ${HOME} -m ${USER} && \
@@ -38,4 +31,5 @@ RUN echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
   sudo rm -rf /var/lib/apt/lists/*
 
 RUN echo -e '\033[36;1m ******* CONTAINER START COMMAND ******** \033[0m'
-CMD xhydra \
+ENTRYPOINT /bin/bash
+CMD ""
