@@ -23,7 +23,7 @@ USER ${USER}
 
 RUN echo -e '\033[36;1m ******* SELECT WORKING SPACE ******** \033[0m'
 WORKDIR ${HOME}
-  
+
 RUN echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
   sudo apt-get --purge autoremove -y && \
   sudo rm /etc/apt/sources.list && \
